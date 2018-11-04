@@ -9,9 +9,11 @@ public class Seller extends Person {
         super(fullName);
     }
 
-    public Seller(String _fullName, ArrayList<Purchase> _purchases, int _earnedMoney){
+    public Seller(String _fullName, ArrayList<Purchase> _purchases){
         super(_fullName, _purchases);
-        earnedMoney = _earnedMoney;
+        for (Purchase p : purchases) {
+            earnedMoney += (int)0.95*p.getSum();
+        }
     }
 
     public int getSpentMoney() {
@@ -38,6 +40,6 @@ public class Seller extends Person {
 
     @Override
     public String toString() {
-        return super.toString() + "spend money on this market: " + earnedMoney + "\n";
+        return super.toString() + "Earned money on this market: " + earnedMoney + "\n";
     }
 }

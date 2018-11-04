@@ -9,17 +9,15 @@ public class User extends Person{
         super(fullName);
     }
 
-    public User(String _fullName, ArrayList<Purchase> _purchases, int _spentMoney){
+    public User(String _fullName, ArrayList<Purchase> _purchases){
         super(_fullName, _purchases);
-        spentMoney = _spentMoney;
+        for(Purchase p : purchases){
+            spentMoney += p.getSum();
+        }
     }
 
     public int getSpentMoney() {
         return spentMoney;
-    }
-
-    public void setSpentMoney(int spentMoney) {
-        this.spentMoney = spentMoney;
     }
 
     @Override

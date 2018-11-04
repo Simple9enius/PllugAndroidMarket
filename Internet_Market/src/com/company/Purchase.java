@@ -6,10 +6,10 @@ public class Purchase {
     private String productName;
     private User user;
     private Seller seller;
-    private int sum;
+    private int sum = 0;
     public Purchase(String _productName, int _sum, User _user, Seller _seller){
         productName = _productName;
-        sum = sum;
+        sum = _sum;
         user = _user;
         seller = _seller;
     }

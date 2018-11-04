@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Person {
     protected String fullName;
-    protected ArrayList<Purchase> purchases;
+    protected ArrayList<Purchase> purchases = new ArrayList<Purchase>();
 
     public Person(String _fullName){
         fullName = _fullName;
