@@ -12,7 +12,7 @@ public class Seller extends Person {
     public Seller(String _fullName, ArrayList<Purchase> _purchases){
         super(_fullName, _purchases);
         for (Purchase p : purchases) {
-            earnedMoney += (int)0.95*p.getSum();
+            earnedMoney += p.getSum()*0.95;
         }
     }
 
@@ -28,14 +28,14 @@ public class Seller extends Person {
     public void setPurchases(ArrayList<Purchase> purchases) {
         this.purchases = purchases;
         for (Purchase p : purchases) {
-            earnedMoney += (int)0.95*p.getSum();
+            earnedMoney += p.getSum()*0.95;
         }
     }
 
     @Override
     public void addPurchase(Purchase _purchase){
         purchases.add(_purchase);
-        earnedMoney += (int)0.95*_purchase.getSum();
+        earnedMoney += _purchase.getSum()*0.95;
     }
 
     @Override

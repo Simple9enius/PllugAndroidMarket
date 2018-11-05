@@ -25,7 +25,7 @@ public class Market {
         sellers = _sellers;
         purchases = _purchases;
         for (Purchase p : purchases) {
-            earnedMoney += (int)(0.05)*p.getSum();
+            earnedMoney += p.getSum()*0.05;
         }
     }
 
@@ -60,7 +60,7 @@ public class Market {
     public void setPurchases(ArrayList<Purchase> purchases) {
         this.purchases = purchases;
         for (Purchase p : purchases) {
-            earnedMoney += (int)(0.05)*p.getSum();
+            earnedMoney += p.getSum()*0.05;
         }
     }
 
