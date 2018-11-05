@@ -39,14 +39,12 @@ public class Main {
             System.out.println("Full name seller of purchase №" + (i + 1) + ": ");
             sellerName = scanner.nextLine();
 
-            User userTmp = new User(userName);
-            Seller sellerTmp = new Seller(sellerName);
-            Purchase purchaseTmp = new Purchase(productName, sum, userTmp, sellerTmp);
+            Purchase purchaseTmp = new Purchase(productName, sum, userName, sellerName);
             purchases.add(purchaseTmp);
 
             for(int j = 0; j < users.size(); j++){
                 if(users.get(j).getFullName().equals(userName)){
-                    userTmp = users.get(j);
+                    User userTmp = users.get(j);
                     userTmp.addPurchase(purchaseTmp);
                     users.set(j, userTmp);
                     check = 0;
@@ -54,14 +52,14 @@ public class Main {
                 }
             }
             if (check == 1){
-                users.add(userTmp);
+                User userTmp = new User(userName);
                 userTmp.addPurchase(purchaseTmp);
-                users.set(users.size()-1, userTmp);
+                users.add(userTmp);
             }
 
             for(int j = 0; j < sellers.size(); j++){
                 if(sellers.get(j).getFullName().equals(sellerName)){
-                    sellerTmp = sellers.get(j);
+                    Seller sellerTmp = sellers.get(j);
                     sellerTmp.addPurchase(purchaseTmp);
                     sellers.set(j, sellerTmp);
                     check = 0;
@@ -69,9 +67,9 @@ public class Main {
                 }
             }
             if (check == 1){
-                sellers.add(sellerTmp);
+                Seller sellerTmp = new Seller(sellerName);
                 sellerTmp.addPurchase(purchaseTmp);
-                sellers.set(sellers.size()-1, sellerTmp);
+                sellers.add(sellerTmp);
             }
         }
         return purchases;

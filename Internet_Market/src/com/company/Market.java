@@ -73,13 +73,13 @@ public class Market {
         String sUsers = "", sSellers = "", sPurchases = "";
 
         for (Purchase p : purchases) {
-            sPurchases += p.toString();
+            sPurchases += p;
         }
         for (User u : users){
-            sUsers += u.toString();
+            sUsers += u;
         }
         for (Seller s : sellers){
-            sSellers += s.toString();
+            sSellers += s;
         }
 
         return "Name: " + name + ".\n" + (sUsers.isEmpty() ? "We haven't got users.\n" : "Users:\n" + sUsers + ".\n") +
