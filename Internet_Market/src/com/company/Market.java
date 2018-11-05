@@ -82,9 +82,9 @@ public class Market {
             sSellers += s;
         }
 
-        return "Name: " + name + ".\n" + (sUsers.isEmpty() ? "We haven't got users.\n" : "Users:\n" + sUsers + ".\n") +
-                (sSellers.isEmpty() ? "We haven't got sellers.\n" : "Sellers:\n" + sSellers + ".\n") +
-                (sPurchases.isEmpty() ? "We haven't got purchases.\n" : "Purchases:\n" + sPurchases + ".\n") +
+        return "Market name: " + name + ".\n" + (sUsers.isEmpty() ? "We haven't got users.\n" : "Users:\n" + sUsers + "\n") +
+                (sSellers.isEmpty() ? "We haven't got sellers.\n" : "Sellers:\n" + sSellers + "\n") +
+                (sPurchases.isEmpty() ? "We haven't got purchases.\n" : "Purchases:\n" + sPurchases + "\n") +
                 "Earned money: " + earnedMoney + ".\n";
     }
 }

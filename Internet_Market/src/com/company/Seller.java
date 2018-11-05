@@ -40,6 +40,6 @@ public class Seller extends Person {
 
     @Override
     public String toString() {
-        return super.toString() + "Earned money on this market: " + earnedMoney + "\n";
+        return super.toString() + "Earned money on this market: " + earnedMoney + "\n\n";
     }
 }

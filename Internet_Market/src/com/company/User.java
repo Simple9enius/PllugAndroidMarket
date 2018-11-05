@@ -36,7 +36,7 @@ public class User extends Person{
 
     @Override
     public String toString() {
-        return super.toString() + "spend money on this market: " + spentMoney + "\n";
+        return super.toString() + "spend money on this market: " + spentMoney + "\n\n";
     }
 
 }

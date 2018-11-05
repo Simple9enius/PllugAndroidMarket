@@ -35,7 +35,7 @@ public class Purchase {
     @Override
     public String toString(){
         return "Product name: " + productName + ".\nCustomer: " + userName +
-                ".\nSeller: " + sellerName + ".\n";
+                ".\nSeller: " + sellerName + ".\n\n";
     }
 
     public String getUserName() {
